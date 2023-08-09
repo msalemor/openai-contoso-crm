@@ -23,6 +23,12 @@ type CrmApplication struct {
 	ProcessorSvcURI    string
 }
 
+type SbMessage struct {
+	Action  string `json:"action"`
+	Model   string `json:"model"`
+	Payload any    `json:"payload"`
+}
+
 type Lead struct {
 	gorm.Model
 	FirstName    string `gorm:"size:50;not null"`
