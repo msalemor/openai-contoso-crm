@@ -4,5 +4,6 @@ backend/leadsvc/leadsvc
 backend/companysvc/companysvc
 backend/contactsvc/contactsvc
 backend/opportunitysvc/opportunitysvc
+backend/gocommon/contoso-crm-common
 *.db
 .env
