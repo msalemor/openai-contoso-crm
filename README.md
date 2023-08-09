@@ -6,6 +6,6 @@ A simple CRM with and without OpenAI integration
 
 ### Main - No OpenAI
 
-### OpenAI - With OpenAI
+### OpenAI - With OpenAI (NOT IMPLEMENTED YET)
 
 
