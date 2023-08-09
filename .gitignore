@@ -1,0 +1,8 @@
+bin/
+obj/
+backend/leadsvc/leadsvc
+backend/companysvc/companysvc
+backend/contactsvc/contactsvc
+backend/opportunitysvc/opportunitysvc
+*.db
+.env

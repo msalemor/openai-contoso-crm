@@ -1,0 +1,18 @@
+POST http://127.0.0.1:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "FirstName": "Mary",
+    "LastName": "Doe",
+    "Email": "mdoe@company.com"
+}
+
+###
+
+GET http://127.0.0.1:8080/contacts HTTP/1.1
+
+###
+
+GET http://127.0.0.1:8080/contacts/1 HTTP/1.1
+
+###
