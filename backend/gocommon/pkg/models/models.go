@@ -1,23 +1,26 @@
 package models
 
 import (
+	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
 
 type CrmApplication struct {
-	Db                *gorm.DB
-	Router            *gin.Engine
-	GinMode           string
-	App_Host          string
-	App_Port          string
-	DB_Connection     string
-	ContactSvcURI     string
-	LeadSvcURI        string
-	CompanySvcURI     string
-	OpportunitySvcURI string
-	QuerySvcURI       string
-	ProcessorSvcURI   string
+	Db                 *gorm.DB
+	Router             *gin.Engine
+	SbConnectionString string
+	SbClient           *azservicebus.Client
+	GinMode            string
+	App_Host           string
+	App_Port           string
+	DB_Connection      string
+	ContactSvcURI      string
+	LeadSvcURI         string
+	CompanySvcURI      string
+	OpportunitySvcURI  string
+	QuerySvcURI        string
+	ProcessorSvcURI    string
 }
 
 type Lead struct {

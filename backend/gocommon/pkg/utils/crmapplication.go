@@ -52,11 +52,24 @@ func initTables(app *models.CrmApplication) {
 	db.AutoMigrate(&models.Company{})
 }
 
+func loadSBClient(app *models.CrmApplication) {
+	if gin.Mode() == gin.ReleaseMode {
+		if app.SbConnectionString == "" {
+			log.Fatal("SB_CONNECTION_STRING environment required and variable not set")
+		}
+		app.SbClient = GetSBClient(app.SbConnectionString)
+		if app.SbClient == nil {
+			log.Fatal("Unable to create Azure ServiceBus Client with the connection string")
+		}
+	}
+}
+
 func NewCrmApplication() *models.CrmApplication {
 	app := &models.CrmApplication{}
 	loadEnvironment(app)
 	defaultGinConfig(app)
 	defaultDbConfig(app)
+	loadSBClient(app)
 	initTables(app)
 	return app
 }

@@ -46,4 +46,6 @@ func loadEnvironment(app *models.CrmApplication) {
 	app.QuerySvcURI = os.Getenv("QUERY_SVC_URI")
 	app.ProcessorSvcURI = os.Getenv("PROCESSOR_SVC_URI")
 
+	// TODO: Remove this when the service bus client is implemented
+	app.SbConnectionString = os.Getenv("SB_CONNECTION_STRING")
 }
