@@ -47,7 +47,7 @@ func SendEvent(queue, action, model string, modelPayload any, client *azserviceb
 	}
 	defer sender.Close(context.TODO())
 
-	sbMessagePayload := models.SbMessage{
+	sbMessagePayload := models.EventMessage{
 		Action:  action,
 		Model:   model,
 		Payload: modelPayload,

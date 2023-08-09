@@ -23,7 +23,7 @@ type CrmApplication struct {
 	ProcessorSvcURI    string
 }
 
-type SbMessage struct {
+type EventMessage struct {
 	Action  string `json:"action"`
 	Model   string `json:"model"`
 	Payload any    `json:"payload"`
